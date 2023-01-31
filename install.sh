@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo add-apt-repository ppa:wslutilities/wslu -y
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt update -y
 sudo apt upgrade -y 
@@ -9,6 +10,7 @@ sudo apt install -y git
 sudo apt install -y tree
 sudo apt install -y zip
 sudo apt install -y ripgrep
+sudo apt install -y wslu
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
@@ -22,5 +24,6 @@ sudo apt install ./nvim-linux64.deb -y
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
